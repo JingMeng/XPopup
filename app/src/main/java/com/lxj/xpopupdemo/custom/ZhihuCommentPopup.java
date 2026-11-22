@@ -1,9 +1,9 @@
-package com.lxj.xpopupdemo.custom;
+﻿package com.lxj.xpopupdemo.custom;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 
 import com.lxj.easyadapter.EasyAdapter;
@@ -20,8 +20,7 @@ import com.lxj.xpopupdemo.R;
 import java.util.ArrayList;
 
 /**
- * Description: 仿知乎底部评论弹窗
- * Create by dance, at 2018/12/25
+ * Description: 浠跨煡涔庡簳閮ㄨ瘎璁哄脊绐? * Create by dance, at 2018/12/25
  */
 public class ZhihuCommentPopup extends BottomPopupView {
     VerticalRecyclerView recyclerView;
@@ -44,7 +43,7 @@ public class ZhihuCommentPopup extends BottomPopupView {
         findViewById(R.id.tv_temp).setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                //弹出新的弹窗用来输入
+                //寮瑰嚭鏂扮殑寮圭獥鐢ㄦ潵杈撳叆
                 final CustomEditTextBottomPopup textBottomPopup = new CustomEditTextBottomPopup(getContext());
                 new XPopup.Builder(getContext())
                         .autoOpenSoftInput(true)
@@ -70,12 +69,12 @@ public class ZhihuCommentPopup extends BottomPopupView {
 
         data = new ArrayList<>();
         for (int i = 0; i < 15; i++) {
-            data.add("这是一个自定义Bottom类型的弹窗！你可以在里面添加任何滚动的View，我已经智能处理好嵌套滚动，你只需编写UI和逻辑即可！");
+            data.add("杩欐槸涓€涓嚜瀹氫箟Bottom绫诲瀷鐨勫脊绐楋紒浣犲彲浠ュ湪閲岄潰娣诲姞浠讳綍婊氬姩鐨刅iew锛屾垜宸茬粡鏅鸿兘澶勭悊濂藉祵濂楁粴鍔紝浣犲彧闇€缂栧啓UI鍜岄€昏緫鍗冲彲锛?);
         }
         commonAdapter = new EasyAdapter<String>(data, R.layout.adapter_zhihu_comment) {
             @Override
             protected void bind(@NonNull ViewHolder holder, @NonNull String s, final int position) {
-                holder.setText(R.id.name, "知乎大神 - " + position)
+                holder.setText(R.id.name, "鐭ヤ箮澶х - " + position)
                         .setText(R.id.comment, s);
                 holder.getView(R.id.btnDel).setOnClickListener(new OnClickListener() {
                     @Override
@@ -90,10 +89,9 @@ public class ZhihuCommentPopup extends BottomPopupView {
         commonAdapter.setOnItemClickListener(new MultiItemTypeAdapter.SimpleOnItemClickListener() {
             @Override
             public void onItemClick(View view, RecyclerView.ViewHolder holder, int position) {
-                //不要直接这样做，会导致消失动画未执行完就跳转界面，不流畅。
-//                dismiss();
+                //涓嶈鐩存帴杩欐牱鍋氾紝浼氬鑷存秷澶卞姩鐢绘湭鎵ц瀹屽氨璺宠浆鐣岄潰锛屼笉娴佺晠銆?//                dismiss();
 //                getContext().startActivity(new Intent(getContext(), DemoActivity.class))
-                //可以等消失动画执行完毕再开启新界面
+                //鍙互绛夋秷澶卞姩鐢绘墽琛屽畬姣曞啀寮€鍚柊鐣岄潰
                 dismissWith(new Runnable() {
                     @Override
                     public void run() {
@@ -107,13 +105,13 @@ public class ZhihuCommentPopup extends BottomPopupView {
         recyclerView.setAdapter(commonAdapter);
     }
 
-    //完全可见执行
+    //瀹屽叏鍙鎵ц
     @Override
     protected void onShow() {
         super.onShow();
     }
 
-    //完全消失执行
+    //瀹屽叏娑堝け鎵ц
     @Override
     protected void onDismiss() {
 

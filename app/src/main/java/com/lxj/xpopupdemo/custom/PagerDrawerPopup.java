@@ -1,11 +1,11 @@
-package com.lxj.xpopupdemo.custom;
+﻿package com.lxj.xpopupdemo.custom;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.design.widget.TabLayout;
-import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import com.google.android.material.tabs.TabLayout;
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
@@ -31,7 +31,7 @@ public class PagerDrawerPopup extends DrawerPopupView {
 
     TabLayout tabLayout;
     ViewPager pager;
-    String[] titles = new String[]{"首页", "娱乐", "汽车", "八卦", "搞笑", "互联网"};
+    String[] titles = new String[]{"棣栭〉", "濞变箰", "姹借溅", "鍏崷", "鎼炵瑧", "浜掕仈缃?};
     @Override
     protected void onCreate() {
         super.onCreate();
@@ -82,3 +82,4 @@ public class PagerDrawerPopup extends DrawerPopupView {
         }
     }
 }
+

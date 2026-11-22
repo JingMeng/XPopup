@@ -1,8 +1,8 @@
-package com.lxj.xpopupdemo.custom;
+﻿package com.lxj.xpopupdemo.custom;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.view.View;
 
 import com.blankj.utilcode.util.ToastUtils;
@@ -30,9 +30,10 @@ public class CustomAttachPopup2 extends AttachPopupView {
 
     }
 
-    //如果要自定义弹窗的背景，不要给布局设置背景图片，重写这个方法返回一个Drawable即可
+    //濡傛灉瑕佽嚜瀹氫箟寮圭獥鐨勮儗鏅紝涓嶈缁欏竷灞€璁剧疆鑳屾櫙鍥剧墖锛岄噸鍐欒繖涓柟娉曡繑鍥炰竴涓狣rawable鍗冲彲
     @Override
     protected Drawable getPopupBackground() {
         return getResources().getDrawable(R.drawable.shadow_bg);
     }
 }
+

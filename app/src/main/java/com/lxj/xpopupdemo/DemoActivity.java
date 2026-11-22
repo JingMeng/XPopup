@@ -1,10 +1,10 @@
-package com.lxj.xpopupdemo;
+﻿package com.lxj.xpopupdemo;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
@@ -40,10 +40,10 @@ public class DemoActivity extends AppCompatActivity {
 
         final BasePopupView popupView = new XPopup.Builder(this)
                 .atView(editText)
-                .isRequestFocus(false) //要设置这个，否则Activity内的输入框会无法获取焦点
+                .isRequestFocus(false) //瑕佽缃繖涓紝鍚﹀垯Activity鍐呯殑杈撳叆妗嗕細鏃犳硶鑾峰彇鐒︾偣
                 .hasShadowBg(false)
                 .popupAnimation(PopupAnimation.ScaleAlphaFromCenter)
-                .asAttachList(new String[]{"联想到的内容 - 1", "联想到的内容 - 2", "联想到的内容 - 333"}, null, new OnSelectListener() {
+                .asAttachList(new String[]{"鑱旀兂鍒扮殑鍐呭 - 1", "鑱旀兂鍒扮殑鍐呭 - 2", "鑱旀兂鍒扮殑鍐呭 - 333"}, null, new OnSelectListener() {
                     @Override
                     public void onSelect(int position, String text) {
                         Toast.makeText(XPopupApp.context, text, Toast.LENGTH_LONG).show();
@@ -79,10 +79,10 @@ public class DemoActivity extends AppCompatActivity {
         loadingPopup.show();
         new XPopup.Builder(DemoActivity.this)
                 .autoDismiss(false)
-                .asBottomList("haha", new String[]{"点我显示弹窗", "点我显示弹窗", "点我显示弹窗", "点我显示弹窗"}, new OnSelectListener() {
+                .asBottomList("haha", new String[]{"鐐规垜鏄剧ず寮圭獥", "鐐规垜鏄剧ず寮圭獥", "鐐规垜鏄剧ず寮圭獥", "鐐规垜鏄剧ず寮圭獥"}, new OnSelectListener() {
                     @Override
                     public void onSelect(int position, String text) {
-                        new XPopup.Builder(DemoActivity.this).asConfirm("测试", "aaaa", new OnConfirmListener() {
+                        new XPopup.Builder(DemoActivity.this).asConfirm("娴嬭瘯", "aaaa", new OnConfirmListener() {
                             @Override
                             public void onConfirm() {
                                 loadingPopup.dismiss();
@@ -94,3 +94,4 @@ public class DemoActivity extends AppCompatActivity {
 
     }
 }
+

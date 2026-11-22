@@ -1,15 +1,15 @@
-package com.lxj.xpopupdemo;
+﻿package com.lxj.xpopupdemo;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.Nullable;
+import com.google.android.material.tabs.TabLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.ViewGroup;
 import android.widget.Toast;
@@ -28,12 +28,12 @@ import com.lxj.xpopupdemo.fragment.QuickStartDemo;
 public class MainActivity extends AppCompatActivity {
 
     PageInfo[] pageInfos = new PageInfo[]{
-            new PageInfo("快速开始", new QuickStartDemo()),
-            new PageInfo("局部阴影", new PartShadowDemo()),
-            new PageInfo("图片浏览", new ImageViewerDemo()),
-            new PageInfo("尝试不同动画", new AllAnimatorDemo()),
-            new PageInfo("自定义弹窗", new CustomPopupDemo()),
-            new PageInfo("自定义动画", new CustomAnimatorDemo())
+            new PageInfo("蹇€熷紑濮?, new QuickStartDemo()),
+            new PageInfo("灞€閮ㄩ槾褰?, new PartShadowDemo()),
+            new PageInfo("鍥剧墖娴忚", new ImageViewerDemo()),
+            new PageInfo("灏濊瘯涓嶅悓鍔ㄧ敾", new AllAnimatorDemo()),
+            new PageInfo("鑷畾涔夊脊绐?, new CustomPopupDemo()),
+            new PageInfo("鑷畾涔夊姩鐢?, new CustomAnimatorDemo())
     };
 
     TabLayout tabLayout;
@@ -98,3 +98,4 @@ public class MainActivity extends AppCompatActivity {
         pageInfos = null;
     }
 }
+

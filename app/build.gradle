@@ -1,11 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
+    namespace 'com.lxj.xpopupdemo'
+    compileSdk 34
     defaultConfig {
         applicationId "com.lxj.xpopupdemo"
-        minSdkVersion 16
-        targetSdkVersion 26
+        minSdk 16
+        targetSdk 34
         versionCode 6
         versionName "1.8.9"
     }
@@ -15,6 +16,7 @@ android {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    
     }
     lintOptions {
         checkReleaseBuilds false
@@ -36,3 +38,7 @@ dependencies {
     implementation 'com.android.support:cardview-v7:28.0.0'
     implementation 'com.lxj:statelayout:1.0.3'
 }
+
+
+
+

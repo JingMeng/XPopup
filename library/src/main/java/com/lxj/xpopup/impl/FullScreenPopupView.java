@@ -5,7 +5,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
@@ -23,8 +23,7 @@ import com.lxj.xpopup.enums.PopupAnimation;
 import com.lxj.xpopup.util.XPopupUtils;
 
 /**
- * Description: 宽高撑满的全屏弹窗
- * Create by lxj, at 2019/2/1
+ * Description: 瀹介珮鎾戞弧鐨勫叏灞忓脊绐? * Create by lxj, at 2019/2/1
  */
 public class FullScreenPopupView extends CenterPopupView {
     public FullScreenPopupView(@NonNull Context context) {
@@ -93,3 +92,4 @@ public class FullScreenPopupView extends CenterPopupView {
         return new TranslateAnimator(getPopupContentView(), PopupAnimation.TranslateFromBottom);
     }
 }
+

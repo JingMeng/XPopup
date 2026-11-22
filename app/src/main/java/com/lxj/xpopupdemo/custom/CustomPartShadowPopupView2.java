@@ -1,7 +1,7 @@
-package com.lxj.xpopupdemo.custom;
+﻿package com.lxj.xpopupdemo.custom;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.lxj.xpopup.impl.PartShadowPopupView;
 import com.lxj.xpopupdemo.R;
@@ -20,3 +20,4 @@ public class CustomPartShadowPopupView2 extends PartShadowPopupView {
     }
 
 }
+

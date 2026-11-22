@@ -1,11 +1,11 @@
-package com.lxj.xpopupdemo.fragment;
+﻿package com.lxj.xpopupdemo.fragment;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -103,15 +103,11 @@ public class ImageViewerDemo extends BaseFragment {
         btn_custom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //自定义的弹窗需要用asCustom来显示，之前的asImageViewer这些方法当然不能用了。
-                CustomImageViewerPopup viewerPopup = new CustomImageViewerPopup(getContext());
-                //自定义的ImageViewer弹窗需要自己手动设置相应的属性，必须设置的有srcView，url和imageLoader。
-                viewerPopup.setSingleSrcView(image2, url2);
+                //鑷畾涔夌殑寮圭獥闇€瑕佺敤asCustom鏉ユ樉绀猴紝涔嬪墠鐨刟sImageViewer杩欎簺鏂规硶褰撶劧涓嶈兘鐢ㄤ簡銆?                CustomImageViewerPopup viewerPopup = new CustomImageViewerPopup(getContext());
+                //鑷畾涔夌殑ImageViewer寮圭獥闇€瑕佽嚜宸辨墜鍔ㄨ缃浉搴旂殑灞炴€э紝蹇呴』璁剧疆鐨勬湁srcView锛寀rl鍜宨mageLoader銆?                viewerPopup.setSingleSrcView(image2, url2);
 //                viewerPopup.isInfinite(true);
                 viewerPopup.setXPopupImageLoader(new ImageLoader());
-//                viewerPopup.isShowIndicator(false);//是否显示页码指示器
-//                viewerPopup.isShowPlaceholder(false);//是否显示白色占位块
-//                viewerPopup.isShowSaveButton(false);//是否显示保存按钮
+//                viewerPopup.isShowIndicator(false);//鏄惁鏄剧ず椤电爜鎸囩ず鍣?//                viewerPopup.isShowPlaceholder(false);//鏄惁鏄剧ず鐧借壊鍗犱綅鍧?//                viewerPopup.isShowSaveButton(false);//鏄惁鏄剧ず淇濆瓨鎸夐挳
                 new XPopup.Builder(getContext())
                         .asCustom(viewerPopup)
                         .show();
@@ -127,13 +123,11 @@ public class ImageViewerDemo extends BaseFragment {
         @Override
         protected void bind(@NonNull final ViewHolder holder, @NonNull final Object s, final int position) {
             final ImageView imageView = holder.<ImageView>getView(R.id.image);
-            //1. 加载图片, 由于ImageView是centerCrop，必须指定Target.SIZE_ORIGINAL，禁止Glide裁剪图片；
-            // 这样我就能拿到原始图片的Matrix，才能有完美的过渡效果
-            Glide.with(imageView).load(s).apply(new RequestOptions().placeholder(R.mipmap.ic_launcher_round)
+            //1. 鍔犺浇鍥剧墖, 鐢变簬ImageView鏄痗enterCrop锛屽繀椤绘寚瀹歍arget.SIZE_ORIGINAL锛岀姝lide瑁佸壀鍥剧墖锛?            // 杩欐牱鎴戝氨鑳芥嬁鍒板師濮嬪浘鐗囩殑Matrix锛屾墠鑳芥湁瀹岀編鐨勮繃娓℃晥鏋?            Glide.with(imageView).load(s).apply(new RequestOptions().placeholder(R.mipmap.ic_launcher_round)
                     .override(Target.SIZE_ORIGINAL))
                     .into(imageView);
 
-            //2. 设置点击
+            //2. 璁剧疆鐐瑰嚮
             imageView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -168,10 +162,10 @@ public class ImageViewerDemo extends BaseFragment {
             imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
             container.addView(imageView);
 
-            //1. 加载图片
+            //1. 鍔犺浇鍥剧墖
             Glide.with(imageView).load(list.get(position)).apply(new RequestOptions().placeholder(R.mipmap.ic_launcher_round).override(Target.SIZE_ORIGINAL))
                     .into(imageView);
-            //2. 设置点击
+            //2. 璁剧疆鐐瑰嚮
             imageView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -179,13 +173,10 @@ public class ImageViewerDemo extends BaseFragment {
                             .asImageViewer(imageView, position, list, true,false, -1, -1, -1, true, new OnSrcViewUpdateListener() {
                         @Override
                         public void onSrcViewUpdate(final ImageViewerPopupView popupView, final int position) {
-                            //1.pager更新当前显示的图片
-                            //当启用isInfinite时，position会无限增大，需要映射为当前ViewPager中的页
-                            int realPosi = position%list.size();
+                            //1.pager鏇存柊褰撳墠鏄剧ず鐨勫浘鐗?                            //褰撳惎鐢╥sInfinite鏃讹紝position浼氭棤闄愬澶э紝闇€瑕佹槧灏勪负褰撳墠ViewPager涓殑椤?                            int realPosi = position%list.size();
 //                            Log.e("tag", "position: "+realPosi + " list size: "+list.size());
                             pager.setCurrentItem(realPosi, false);
-                            //2.更新弹窗的srcView，注意这里的position是list中的position，上面ViewPager设置了pageLimit数量，
-                            //保证能拿到child，如果不设置pageLimit，ViewPager默认最多维护3个page，会导致拿不到child
+                            //2.鏇存柊寮圭獥鐨剆rcView锛屾敞鎰忚繖閲岀殑position鏄痩ist涓殑position锛屼笂闈iewPager璁剧疆浜唒ageLimit鏁伴噺锛?                            //淇濊瘉鑳芥嬁鍒癱hild锛屽鏋滀笉璁剧疆pageLimit锛孷iewPager榛樿鏈€澶氱淮鎶?涓猵age锛屼細瀵艰嚧鎷夸笉鍒癱hild
                             popupView.updateSrcView((ImageView) pager.getChildAt(realPosi));
                         }
                     }, new ImageLoader())
@@ -205,7 +196,7 @@ public class ImageViewerDemo extends BaseFragment {
     public static class ImageLoader implements XPopupImageLoader {
         @Override
         public void loadImage(int position, @NonNull Object url, @NonNull ImageView imageView) {
-            //必须指定Target.SIZE_ORIGINAL，否则无法拿到原图，就无法享用天衣无缝的动画
+            //蹇呴』鎸囧畾Target.SIZE_ORIGINAL锛屽惁鍒欐棤娉曟嬁鍒板師鍥撅紝灏辨棤娉曚韩鐢ㄥぉ琛ｆ棤缂濈殑鍔ㄧ敾
             Glide.with(imageView).load(url).apply(new RequestOptions().placeholder(R.mipmap.ic_launcher_round).override(Target.SIZE_ORIGINAL)).into(imageView);
         }
 
@@ -220,4 +211,5 @@ public class ImageViewerDemo extends BaseFragment {
         }
     }
 }
+
 

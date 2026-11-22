@@ -1,7 +1,7 @@
 package com.lxj.xpopup.core;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -10,8 +10,7 @@ import com.lxj.xpopup.enums.PopupPosition;
 import com.lxj.xpopup.widget.PopupDrawerLayout;
 
 /**
- * Description: 带Drawer的弹窗
- * Create by dance, at 2018/12/20
+ * Description: 甯rawer鐨勫脊绐? * Create by dance, at 2018/12/20
  */
 public abstract class DrawerPopupView extends BasePopupView {
     PopupDrawerLayout drawerLayout;
@@ -78,8 +77,7 @@ public abstract class DrawerPopupView extends BasePopupView {
     }
 
     /**
-     * 动画是跟随手势发生的，所以不需要额外的动画器，因此动画时间也清零
-     *
+     * 鍔ㄧ敾鏄窡闅忔墜鍔垮彂鐢熺殑锛屾墍浠ヤ笉闇€瑕侀澶栫殑鍔ㄧ敾鍣紝鍥犳鍔ㄧ敾鏃堕棿涔熸竻闆?     *
      * @return
      */
     @Override
@@ -89,7 +87,7 @@ public abstract class DrawerPopupView extends BasePopupView {
 
     @Override
     public void dismiss() {
-        // 关闭Drawer，由于Drawer注册了关闭监听，会自动调用dismiss
+        // 鍏抽棴Drawer锛岀敱浜嶥rawer娉ㄥ唽浜嗗叧闂洃鍚紝浼氳嚜鍔ㄨ皟鐢╠ismiss
         drawerLayout.close();
     }
 
@@ -98,3 +96,4 @@ public abstract class DrawerPopupView extends BasePopupView {
         return getPopupImplView();
     }
 }
+

@@ -1,7 +1,7 @@
 package com.lxj.xpopup.core;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +13,7 @@ import com.lxj.xpopup.util.XPopupUtils;
 import com.lxj.xpopup.widget.SmartDragLayout;
 
 /**
- * Description: 在底部显示的Popup
+ * Description: 鍦ㄥ簳閮ㄦ樉绀虹殑Popup
  * Create by lxj, at 2018/12/11
  */
 public class BottomPopupView extends BasePopupView {
@@ -90,8 +90,7 @@ public class BottomPopupView extends BasePopupView {
     }
 
     /**
-     * 动画是跟随手势发生的，所以不需要额外的动画器，因此动画时间也清零
-     *
+     * 鍔ㄧ敾鏄窡闅忔墜鍔垮彂鐢熺殑锛屾墍浠ヤ笉闇€瑕侀澶栫殑鍔ㄧ敾鍣紝鍥犳鍔ㄧ敾鏃堕棿涔熸竻闆?     *
      * @return
      */
     @Override
@@ -101,7 +100,7 @@ public class BottomPopupView extends BasePopupView {
 
     @Override
     protected PopupAnimator getPopupAnimator() {
-        // 移除默认的动画器
+        // 绉婚櫎榛樿鐨勫姩鐢诲櫒
         return popupInfo.enableDrag ? null : super.getPopupAnimator();
     }
 
@@ -112,7 +111,7 @@ public class BottomPopupView extends BasePopupView {
             popupStatus = PopupStatus.Dismissing;
             if (popupInfo.autoOpenSoftInput) KeyboardUtils.hideSoftInput(this);
             clearFocus();
-            // 关闭Drawer，由于Drawer注册了关闭监听，会自动调用dismiss
+            // 鍏抽棴Drawer锛岀敱浜嶥rawer娉ㄥ唽浜嗗叧闂洃鍚紝浼氳嚜鍔ㄨ皟鐢╠ismiss
             bottomPopupContainer.close();
         } else {
             super.dismiss();
@@ -120,7 +119,7 @@ public class BottomPopupView extends BasePopupView {
     }
 
     /**
-     * 具体实现的类的布局
+     * 鍏蜂綋瀹炵幇鐨勭被鐨勫竷灞€
      *
      * @return
      */
@@ -139,3 +138,4 @@ public class BottomPopupView extends BasePopupView {
     }
 
 }
+

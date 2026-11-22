@@ -1,8 +1,8 @@
-package com.lxj.xpopupdemo.custom;
+﻿package com.lxj.xpopupdemo.custom;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,8 +16,7 @@ import com.lxj.xpopupdemo.R;
 import java.util.Random;
 
 /**
- * Description: 自定义抽屉弹窗
- * Create by dance, at 2018/12/20
+ * Description: 鑷畾涔夋娊灞夊脊绐? * Create by dance, at 2018/12/20
  */
 public class CustomDrawerPopupView extends DrawerPopupView {
     TextView text;
@@ -42,8 +41,7 @@ public class CustomDrawerPopupView extends DrawerPopupView {
         });
         text.setText(new Random().nextInt()+"");
 
-        //通过设置topMargin，可以让Drawer弹窗进行局部阴影展示
-//        ViewGroup.MarginLayoutParams params = (MarginLayoutParams) getPopupContentView().getLayoutParams();
+        //閫氳繃璁剧疆topMargin锛屽彲浠ヨDrawer寮圭獥杩涜灞€閮ㄩ槾褰卞睍绀?//        ViewGroup.MarginLayoutParams params = (MarginLayoutParams) getPopupContentView().getLayoutParams();
 //        params.topMargin = 450;
     }
 

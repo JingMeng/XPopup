@@ -1,8 +1,8 @@
 package com.lxj.xpopup.impl;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 
 import com.lxj.easyadapter.EasyAdapter;
@@ -16,8 +16,7 @@ import com.lxj.xpopup.widget.VerticalRecyclerView;
 import java.util.Arrays;
 
 /**
- * Description: Attach类型的列表弹窗
- * Create by dance, at 2018/12/12
+ * Description: Attach绫诲瀷鐨勫垪琛ㄥ脊绐? * Create by dance, at 2018/12/12
  */
 public class AttachListPopupView extends AttachPopupView {
     VerticalRecyclerView recyclerView;
@@ -29,9 +28,8 @@ public class AttachListPopupView extends AttachPopupView {
     }
 
     /**
-     * 传入自定义的布局，对布局中的id有要求
-     *
-     * @param layoutId 要求layoutId中必须有一个id为recyclerView的RecyclerView，如果你需要显示标题，则必须有一个id为tv_title的TextView
+     * 浼犲叆鑷畾涔夌殑甯冨眬锛屽甯冨眬涓殑id鏈夎姹?     *
+     * @param layoutId 瑕佹眰layoutId涓繀椤绘湁涓€涓猧d涓簉ecyclerView鐨凴ecyclerView锛屽鏋滀綘闇€瑕佹樉绀烘爣棰橈紝鍒欏繀椤绘湁涓€涓猧d涓簍v_title鐨凾extView
      * @return
      */
     public AttachListPopupView bindLayout(int layoutId) {
@@ -40,9 +38,9 @@ public class AttachListPopupView extends AttachPopupView {
     }
 
     /**
-     * 传入自定义的 item布局
+     * 浼犲叆鑷畾涔夌殑 item甯冨眬
      *
-     * @param itemLayoutId 条目的布局id，要求布局中必须有id为iv_image的ImageView，和id为tv_text的TextView
+     * @param itemLayoutId 鏉＄洰鐨勫竷灞€id锛岃姹傚竷灞€涓繀椤绘湁id涓篿v_image鐨処mageView锛屽拰id涓簍v_text鐨凾extView
      * @return
      */
     public AttachListPopupView bindItemLayout(int itemLayoutId) {
@@ -107,3 +105,4 @@ public class AttachListPopupView extends AttachPopupView {
         return this;
     }
 }
+

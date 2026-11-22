@@ -1,7 +1,7 @@
 package com.lxj.xpopup.core;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -16,7 +16,7 @@ import com.lxj.xpopup.util.XPopupUtils;
 import static com.lxj.xpopup.enums.PopupAnimation.ScaleAlphaFromCenter;
 
 /**
- * Description: 在中间显示的Popup
+ * Description: 鍦ㄤ腑闂存樉绀虹殑Popup
  * Create by dance, at 2018/12/8
  */
 public class CenterPopupView extends BasePopupView {
@@ -52,7 +52,7 @@ public class CenterPopupView extends BasePopupView {
     }
 
     /**
-     * 具体实现的类的布局
+     * 鍏蜂綋瀹炵幇鐨勭被鐨勫竷灞€
      *
      * @return
      */
@@ -70,3 +70,4 @@ public class CenterPopupView extends BasePopupView {
         return new ScaleAlphaAnimator(getPopupContentView(), ScaleAlphaFromCenter);
     }
 }
+

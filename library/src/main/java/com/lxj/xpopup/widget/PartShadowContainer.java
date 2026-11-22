@@ -3,8 +3,8 @@ package com.lxj.xpopup.widget;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Rect;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.Gravity;
@@ -38,7 +38,7 @@ public class PartShadowContainer extends FrameLayout {
     private float x, y;
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        // 计算implView的Rect
+        // 璁＄畻implView鐨凴ect
         View implView = getChildAt(0);
         int[] location = new int[2];
         implView.getLocationInWindow(location);
@@ -73,3 +73,4 @@ public class PartShadowContainer extends FrameLayout {
         this.listener = listener;
     }
 }
+

@@ -1,7 +1,7 @@
-package com.lxj.xpopupdemo.custom;
+﻿package com.lxj.xpopupdemo.custom;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -12,7 +12,7 @@ import com.lxj.xpopup.util.XPopupUtils;
 import com.lxj.xpopupdemo.R;
 
 /**
- * Description: 带有输入框的Bottom弹窗
+ * Description: 甯︽湁杈撳叆妗嗙殑Bottom寮圭獥
  * Create by dance, at 2019/2/27
  */
 public class CustomEditTextBottomPopup extends BottomPopupView {
@@ -60,3 +60,4 @@ public class CustomEditTextBottomPopup extends BottomPopupView {
 //        return (int) (XPopupUtils.getWindowHeight(getContext())*0.75);
 //    }
 }
+

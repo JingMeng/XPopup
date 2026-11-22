@@ -1,7 +1,7 @@
-package com.lxj.xpopupdemo.custom;
+﻿package com.lxj.xpopupdemo.custom;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,7 +39,7 @@ public class CustomPartShadowPopupView extends PartShadowPopupView {
         findViewById(R.id.ch).setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                text.setText(text.getText()+"\n 啦啦啦啦啦啦");
+                text.setText(text.getText()+"\n 鍟﹀暒鍟﹀暒鍟﹀暒");
 
             }
         });
@@ -57,3 +57,4 @@ public class CustomPartShadowPopupView extends PartShadowPopupView {
         Log.e("tag","CustomPartShadowPopupView onDismiss");
     }
 }
+

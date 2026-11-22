@@ -1,9 +1,9 @@
-package com.lxj.xpopupdemo.fragment;
+﻿package com.lxj.xpopupdemo.fragment;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -38,7 +38,7 @@ public class CustomPopupDemo extends BaseFragment {
     public void init(View view) {
         spinner = view.findViewById(R.id.spinner);
         temp = view.findViewById(R.id.temp);
-        temp.setText("演示如何自定义弹窗，并给自定义的弹窗应用不同的内置动画方案；你也可以为自己的弹窗编写自定义的动画。");
+        temp.setText("婕旂ず濡備綍鑷畾涔夊脊绐楋紝骞剁粰鑷畾涔夌殑寮圭獥搴旂敤涓嶅悓鐨勫唴缃姩鐢绘柟妗堬紱浣犱篃鍙互涓鸿嚜宸辩殑寮圭獥缂栧啓鑷畾涔夌殑鍔ㄧ敾銆?);
 
         data = PopupAnimation.values();
         spinner.setAdapter(new ArrayAdapter<PopupAnimation>(getContext(), android.R.layout.simple_list_item_1, data));
@@ -57,7 +57,7 @@ public class CustomPopupDemo extends BaseFragment {
                                 .asCustom(customPopup)
                                 .show();
                     }
-                }, 200); //确保spinner的消失动画不影响XPopup动画，可以看得更清晰
+                }, 200); //纭繚spinner鐨勬秷澶卞姩鐢讳笉褰卞搷XPopup鍔ㄧ敾锛屽彲浠ョ湅寰楁洿娓呮櫚
 
             }
 
@@ -97,8 +97,7 @@ public class CustomPopupDemo extends BaseFragment {
 //            return 200;
 //        }
 //
-        //返回0表示让宽度撑满window，或者你可以返回一个任意宽度
-//        @Override
+        //杩斿洖0琛ㄧず璁╁搴︽拺婊indow锛屾垨鑰呬綘鍙互杩斿洖涓€涓换鎰忓搴?//        @Override
 //        protected int getMaxWidth() {
 //            return 1200;
 //        }
@@ -139,10 +138,10 @@ public class CustomPopupDemo extends BaseFragment {
 //            return 1200;
 //        }
 //
-        //返回0表示让宽度撑满window，或者你可以返回一个任意宽度
-//        @Override
+        //杩斿洖0琛ㄧず璁╁搴︽拺婊indow锛屾垨鑰呬綘鍙互杩斿洖涓€涓换鎰忓搴?//        @Override
 //        protected int getMaxWidth() {
 //            return 1200;
 //        }
     }
 }
+

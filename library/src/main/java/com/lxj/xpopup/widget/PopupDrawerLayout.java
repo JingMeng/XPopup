@@ -6,10 +6,10 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
-import android.support.annotation.NonNull;
-import android.support.v4.view.ViewCompat;
-import android.support.v4.view.ViewPager;
-import android.support.v4.widget.ViewDragHelper;
+import androidx.annotation.NonNull;
+import androidx.core.view.ViewCompat;
+import androidx.viewpager.widget.ViewPager;
+import androidx.customview.widget.ViewDragHelper;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
@@ -23,8 +23,8 @@ import com.lxj.xpopup.enums.PopupPosition;
 import com.lxj.xpopup.util.XPopupUtils;
 
 /**
- * Description: 根据手势拖拽子View的layout，这种类型的弹窗比较特殊，不需要额外的动画器，因为
- * 动画是根据手势滑动而发生的
+ * Description: 鏍规嵁鎵嬪娍鎷栨嫿瀛怴iew鐨刲ayout锛岃繖绉嶇被鍨嬬殑寮圭獥姣旇緝鐗规畩锛屼笉闇€瑕侀澶栫殑鍔ㄧ敾鍣紝鍥犱负
+ * 鍔ㄧ敾鏄牴鎹墜鍔挎粦鍔ㄨ€屽彂鐢熺殑
  * Create by dance, at 2018/12/20
  */
 public class PopupDrawerLayout extends FrameLayout {
@@ -282,7 +282,7 @@ public class PopupDrawerLayout extends FrameLayout {
     }
 
     /**
-     * 打开Drawer
+     * 鎵撳紑Drawer
      */
     public void open() {
         post(new Runnable() {
@@ -296,7 +296,7 @@ public class PopupDrawerLayout extends FrameLayout {
 
     public boolean isCanClose = true;
     /**
-     * 关闭Drawer
+     * 鍏抽棴Drawer
      */
     public void close() {
         if (dragHelper.continueSettling(true)) return;
@@ -322,10 +322,10 @@ public class PopupDrawerLayout extends FrameLayout {
         void onOpen();
 
         /**
-         * 关闭过程中执行
-         *
-         * @param fraction 关闭的百分比
+         * 鍏抽棴杩囩▼涓墽琛?         *
+         * @param fraction 鍏抽棴鐨勭櫨鍒嗘瘮
          */
         void onDismissing(float fraction);
     }
 }
+

@@ -1,6 +1,6 @@
 package com.lxj.xpopup.interfaces;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.lxj.xpopup.core.ImageViewerPopupView;
 
@@ -11,3 +11,4 @@ import com.lxj.xpopup.core.ImageViewerPopupView;
 public interface OnSrcViewUpdateListener {
     void onSrcViewUpdate(@NonNull ImageViewerPopupView popupView, int position);
 }
+

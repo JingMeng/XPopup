@@ -1,7 +1,7 @@
 package com.lxj.xpopup.core;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,8 +15,7 @@ import com.lxj.xpopup.widget.PartShadowContainer;
 import static com.lxj.xpopup.enums.PopupAnimation.ScaleAlphaFromCenter;
 
 /**
- * Description: 用于自由定位的弹窗
- * Create by dance, at 2019/6/14
+ * Description: 鐢ㄤ簬鑷敱瀹氫綅鐨勫脊绐? * Create by dance, at 2019/6/14
  */
 public class PositionPopupView extends BasePopupView {
     PartShadowContainer attachPopupContainer;
@@ -56,3 +55,4 @@ public class PositionPopupView extends BasePopupView {
         return new ScrollScaleAnimator(getPopupContentView(), ScaleAlphaFromCenter);
     }
 }
+

@@ -1,8 +1,8 @@
-package com.lxj.xpopupdemo.fragment;
+﻿package com.lxj.xpopupdemo.fragment;
 
 
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import com.lxj.easyadapter.EasyAdapter;
 import com.lxj.easyadapter.MultiItemTypeAdapter;
@@ -21,7 +21,7 @@ import com.lxj.xpopupdemo.custom.CustomPartShadowPopupView2;
 import java.util.ArrayList;
 
 /**
- * Description: 局部阴影的示例
+ * Description: 灞€閮ㄩ槾褰辩殑绀轰緥
  * Create by dance, at 2018/12/21
  */
 public class PartShadowDemo extends BaseFragment implements View.OnClickListener {
@@ -58,13 +58,13 @@ public class PartShadowDemo extends BaseFragment implements View.OnClickListener
         EasyAdapter<String> adapter = new EasyAdapter<String>(data, android.R.layout.simple_list_item_1) {
             @Override
             protected void bind(@NonNull ViewHolder holder, @NonNull String s, int position) {
-                holder.setText(android.R.id.text1, "长按我试试 - " + position);
-                //必须要在事件发生之前就watch
+                holder.setText(android.R.id.text1, "闀挎寜鎴戣瘯璇?- " + position);
+                //蹇呴』瑕佸湪浜嬩欢鍙戠敓涔嬪墠灏眞atch
                 final XPopup.Builder builder = new XPopup.Builder(getContext()).watchView(holder.itemView);
                 holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
                     @Override
                     public boolean onLongClick(View v) {
-                        builder.asAttachList(new String[]{"置顶", "编辑", "删除"}, null,0,10, new OnSelectListener() {
+                        builder.asAttachList(new String[]{"缃《", "缂栬緫", "鍒犻櫎"}, null,0,10, new OnSelectListener() {
                             @Override
                             public void onSelect(int position, String text) {
                                 toast(text);
@@ -96,7 +96,7 @@ public class PartShadowDemo extends BaseFragment implements View.OnClickListener
                     .setPopupCallback(new SimpleCallback() {
                         @Override
                         public void onShow() {
-                            toast("显示了");
+                            toast("鏄剧ず浜?);
                         }
                         @Override
                         public void onDismiss() {
@@ -119,8 +119,8 @@ public class PartShadowDemo extends BaseFragment implements View.OnClickListener
                 break;
             case R.id.tv_filter:
                 new XPopup.Builder(getContext())
-                        .popupPosition(PopupPosition.Right)//右边
-                        .hasStatusBarShadow(true) //启用状态栏阴影
+                        .popupPosition(PopupPosition.Right)//鍙宠竟
+                        .hasStatusBarShadow(true) //鍚敤鐘舵€佹爮闃村奖
                         .asCustom(drawerPopupView)
                         .show();
                 break;
@@ -147,3 +147,4 @@ public class PartShadowDemo extends BaseFragment implements View.OnClickListener
         }
     }
 }
+

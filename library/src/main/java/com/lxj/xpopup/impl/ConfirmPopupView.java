@@ -1,7 +1,7 @@
 package com.lxj.xpopup.impl;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.TextView;
@@ -13,8 +13,7 @@ import com.lxj.xpopup.interfaces.OnCancelListener;
 import com.lxj.xpopup.interfaces.OnConfirmListener;
 
 /**
- * Description: 确定和取消的对话框
- * Create by dance, at 2018/12/16
+ * Description: 纭畾鍜屽彇娑堢殑瀵硅瘽妗? * Create by dance, at 2018/12/16
  */
 public class ConfirmPopupView extends CenterPopupView implements View.OnClickListener {
     OnCancelListener cancelListener;
@@ -28,8 +27,8 @@ public class ConfirmPopupView extends CenterPopupView implements View.OnClickLis
     }
 
     /**
-     * 绑定已有布局
-     * @param layoutId 要求布局中必须包含的TextView以及id有：tv_title，tv_content，tv_cancel，tv_confirm
+     * 缁戝畾宸叉湁甯冨眬
+     * @param layoutId 瑕佹眰甯冨眬涓繀椤诲寘鍚殑TextView浠ュ強id鏈夛細tv_title锛宼v_content锛宼v_cancel锛宼v_confirm
      * @return
      */
     public ConfirmPopupView bindLayout(int layoutId){
@@ -119,3 +118,4 @@ public class ConfirmPopupView extends CenterPopupView implements View.OnClickLis
         }
     }
 }
+

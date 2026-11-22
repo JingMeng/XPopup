@@ -3,8 +3,8 @@ package com.lxj.xpopup.impl;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.AppCompatEditText;
+import androidx.annotation.NonNull;
+import androidx.appcompat.widget.AppCompatEditText;
 import android.text.TextUtils;
 import android.view.View;
 import com.lxj.xpopup.R;
@@ -14,7 +14,7 @@ import com.lxj.xpopup.interfaces.OnInputConfirmListener;
 import com.lxj.xpopup.util.XPopupUtils;
 
 /**
- * Description: 带输入框，确定和取消的对话框
+ * Description: 甯﹁緭鍏ユ锛岀‘瀹氬拰鍙栨秷鐨勫璇濇
  * Create by dance, at 2018/12/16
  */
 public class InputConfirmPopupView extends ConfirmPopupView implements View.OnClickListener{
@@ -24,8 +24,8 @@ public class InputConfirmPopupView extends ConfirmPopupView implements View.OnCl
     }
 
     /**
-     * 绑定已有布局
-     * @param layoutId 在Confirm弹窗基础上需要增加一个id为et_input的EditText
+     * 缁戝畾宸叉湁甯冨眬
+     * @param layoutId 鍦–onfirm寮圭獥鍩虹涓婇渶瑕佸鍔犱竴涓猧d涓篹t_input鐨凟ditText
      * @return
      */
     public InputConfirmPopupView bindLayout(int layoutId){
@@ -86,3 +86,4 @@ public class InputConfirmPopupView extends ConfirmPopupView implements View.OnCl
         }
     }
 }
+
